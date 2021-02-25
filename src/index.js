@@ -1381,13 +1381,13 @@ class ServerlessAppsyncPlugin {
       [logicalIdGraphQLApiUrlOutput]: {
         Value: { 'Fn::GetAtt': [logicalIdGraphQLApi, 'GraphQLUrl'] },
         Export: {
-          Name: { 'Fn::Sub': `\${AWS::StackName}-${logicalIdGraphQLApiUrlOutput.toLowerCase()}` },
+          Name: { 'Fn::Sub': `\${AWS::StackName}-${logicalIdGraphQLApiUrlOutput}` },
         },
       },
       [logicalIdGraphQLApiIdOutput]: {
         Value: { 'Fn::GetAtt': [logicalIdGraphQLApi, 'ApiId'] },
         Export: {
-          Name: { 'Fn::Sub': `\${AWS::StackName}-${logicalIdGraphQLApiIdOutput.toLowerCase()}` },
+          Name: { 'Fn::Sub': `\${AWS::StackName}-${logicalIdGraphQLApiIdOutput}` },
         },
       },
     };
